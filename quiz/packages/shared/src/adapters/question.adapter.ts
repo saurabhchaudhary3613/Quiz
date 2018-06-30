@@ -9,7 +9,6 @@ export interface QuestionAdapter {
 }
 
 export interface OrderAdapter {
-    
     fetchQuestions(): Promise<jsQuestion[]>;
 }
 
@@ -18,7 +17,7 @@ export class HttpQuestionAdapter implements QuestionAdapter {
         return axios.post(url + '/api/questions', jsQuestion);
     }
     fetchQuestions(): Promise<jsQuestion[]> {
-        return axios.get(url + '/api/questions').then((response:any) => {
+        return axios.get(url + '/api/questions').then((response: any) => {
             return response.data;
         });
     }

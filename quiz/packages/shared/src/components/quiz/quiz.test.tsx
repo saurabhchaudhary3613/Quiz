@@ -8,7 +8,7 @@ import { Quiz } from './quiz';
 test('Header renders specified title', () => {
     const wrapper = mount(
         <MuiThemeProvider theme={getTestTheme()}>
-            <Quiz></Quiz>
+            <Quiz />
         </MuiThemeProvider>
     );
     //expect(wrapper.find(Quiz).text()).toEqual('React Template');

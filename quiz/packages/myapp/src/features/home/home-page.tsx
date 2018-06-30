@@ -13,7 +13,7 @@ export class HomePage extends React.Component<{}, {}> {
         return (
             <div>
                 <Header>Home</Header>
-                
+
                 <div>
                     <Quiz />
                 </div>

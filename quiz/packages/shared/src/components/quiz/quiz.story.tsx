@@ -6,7 +6,7 @@ import { TestRootStore } from '../../stores/test-support/test-root.store';
 import { Quiz } from './quiz';
 import { jsQuestions } from '../../domain/data';
 
-    storiesOf('Quiz', module)
+storiesOf('Quiz', module)
     .addDecorator(StoryDecorator)
     .add('order list', () => {
         const rootStore = new TestRootStore();

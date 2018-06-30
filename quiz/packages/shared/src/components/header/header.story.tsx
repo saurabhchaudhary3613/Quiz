@@ -6,4 +6,4 @@ import { Header } from './header';
 
 storiesOf('Header', module)
     .addDecorator(StoryDecorator)
-    .add('with title', () => <Header></Header>);
+    .add('with title', () => <Header />);

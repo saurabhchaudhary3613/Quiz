@@ -15,7 +15,7 @@ export interface HeaderProps {
 const styles = (theme: Theme) => ({
     toolbar: {
         background: '#0030FF',
-        padding: '20px 0',
+        padding: '20px 0'
     },
     lowerText: {
         textAlign: 'center' as 'center',
@@ -23,7 +23,7 @@ const styles = (theme: Theme) => ({
         fontSize: '16px',
         color: '#FFFFFF',
         letterSpacing: '6px',
-        lineHeight: '24px',
+        lineHeight: '24px'
         //fontWeight: 'bold'
     },
     upperText: {
@@ -32,7 +32,7 @@ const styles = (theme: Theme) => ({
         fontSize: '16px',
         color: '#FFFFFF',
         letterSpacing: '6px',
-        lineHeight: '24px',
+        lineHeight: '24px'
         //fontWeight: 'bold',
     },
     text: {
@@ -43,22 +43,22 @@ const styles = (theme: Theme) => ({
 const decorate = withStyles(styles);
 
 export const Header = decorate(
-   
     class extends React.Component<
-        HeaderProps &
-            WithStyles<'toolbar' | 'upperText' | 'lowerText' | 'text'>
+        HeaderProps & WithStyles<'toolbar' | 'upperText' | 'lowerText' | 'text'>
     > {
         render() {
             const { classes, children } = this.props;
-            
+
             return (
                 <AppBar position="static" className={classes.toolbar}>
-                    <div className={classes.upperText}><span className={classes.text}>GENERAL</span></div>
-                    <div className={classes.lowerText}><span className={classes.text}>KNOWLEDGE_</span></div>
+                    <div className={classes.upperText}>
+                        <span className={classes.text}>GENERAL</span>
+                    </div>
+                    <div className={classes.lowerText}>
+                        <span className={classes.text}>KNOWLEDGE_</span>
+                    </div>
                 </AppBar>
             );
         }
     }
-        
 );
-

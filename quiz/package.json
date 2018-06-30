@@ -17,7 +17,7 @@
     "prebuild": "yarn del-dist",
     "build": "lerna exec --scope shared -- tsc",
     "start": "cd packages/myapp && yarn start",
-    "format": "prettier --print-width 80 --tab-width 4 --single-quote --write 'packages/*/src/**/{*.js,*.ts*}'",
+    "format": "prettier --print-width 80 --tab-width 4 --single-quote --write packages/*/src/**/{*.js,*.ts*}",
     "precommit": "lint-staged"
   },
   "devDependencies": {

@@ -1,11 +1,9 @@
 import { action, computed, decorate, observable, ObservableMap } from 'mobx';
 import { jsQuestion, Question } from '../domain/question';
 
-
 export class QuestionStore {
     rootStore: any;
     questionMap = new ObservableMap();
-    
 
     constructor(rootStore: any) {
         this.rootStore = rootStore;
@@ -19,7 +17,6 @@ export class QuestionStore {
 
     // Action to create one order in the store
     createQuestion = (jsQuestion: jsQuestion) => {
-       
         const newQuestion = new Question(
             jsQuestion.qNo,
             jsQuestion.question,
@@ -28,7 +25,6 @@ export class QuestionStore {
         );
         this.questionMap.set(jsQuestion.qNo, newQuestion);
     };
-   
 
     loadQuestion = () => {
         const { questionAdapter } = this.rootStore.adapters;
@@ -42,13 +38,10 @@ export class QuestionStore {
 
     getQuestion = () => {
         return Array.from(this.questionMap.values());
-    }
-
-   
+    };
 }
 decorate(QuestionStore, {
     questionMap: observable,
     initialize: action,
-    createQuestion: action,
-    
+    createQuestion: action
 });
